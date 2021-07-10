@@ -1,0 +1,138 @@
+* {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --background-color: #0a0c1b;
+  --background2-color: #1c1938;
+  --main-color: #a958d5;
+  --overlay-color: #9e55cb;
+}
+body {
+  background-color: var(--background-color);
+}
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+
+  color: white;
+  width: 70%;
+  height: 24rem;
+  border-radius: 10px;
+  background-color: var(--background2-color);
+}
+.left-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-side {
+  width: 50%;
+  height: 100%;
+}
+.text {
+  width: 80%;
+  height: 80%;
+}
+.text h1 {
+  font-size: 2.1rem;
+  margin: 0;
+}
+.text h1 span {
+  color: var(--main-color);
+  font-size: 2.1rem;
+  margin: 0;
+}
+.text p {
+  max-width: 90%;
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: #aaaaaa;
+}
+.num {
+  margin-top: 5rem;
+  text-align: left;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.num .last {
+  padding-left: 3rem;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: #aaaaaa;
+}
+.num .last span {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.right-side img {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  height: 100%;
+  bottom: 100%;
+  position: relative;
+}
+.overlay {
+  position: relative;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: var(--overlay-color);
+  mix-blend-mode: multiply;
+}
+@media only screen and (max-width: 768px) {
+  * {
+    font-size: 12px;
+  }
+  .container {
+    height: 60rem;
+    display: inline-block;
+  }
+  .left-side {
+    width: 100%;
+    height: 55%;
+    position: relative;
+    top: 45%;
+  }
+  .right-side img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0px;
+  }
+  .right-side {
+    width: 100%;
+    height: 45%;
+    position: relative;
+    bottom: 55%;
+  }
+  .text {
+    text-align: center;
+  }
+  .num {
+    display: block;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .num .last span {
+    display: grid;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+  }
+}
